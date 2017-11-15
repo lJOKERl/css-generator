@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Тестовый</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i" rel="stylesheet">
+</head>
+
+<body>
+
+<div id="main">
+    <div class="options">
+
+        <input type="text" name="" id="some_text" placeholder="Some text" />
+
+        <div class="menu_title"><span class="marker">+</span> Работа с текстом</div>
+        <div class="menu" style="display: none">
+            <div class="option">
+                <label><input name="font" type="checkbox" id="bold" name=""> bold</label><br>
+                <label><input name="font" type="checkbox" id="italic" name=""> italic</label><br>
+                <label><input name="font" type="checkbox" id="underline" name=""> underline</label>
+            </div>
+
+            <div class="option">
+                <span>Цвет текста: </span>
+                <input type="color" id="text_color" value="#dddddd" name="">
+            </div>
+
+            <div class="option_title">font-size</div>
+            <select id="font_size">
+                <option value="">20px</option>
+                <option value="">24px</option>
+                <option value="">26px</option>
+                <option value="">28px</option>
+                <option value="">32px</option>
+                <option value="">36px</option>
+                <option value="">40px</option>
+            </select>
+
+            <div class="option_title">text-align</div>
+            <select id="text_align">
+                <option value="">left</option>
+                <option value="">right</option>
+                <option value="">center</option>
+            </select>
+        </div>
+        
+        <div class="menu_title"><span class="marker">+</span> Работа с блоком</div>
+        <div class="menu" style="display: none;">
+            <div class="option_title">border-radius</div>
+            <input type="range" id="r1" min="0" max="50" value="0" name="">
+
+            <div class="option_title">padding</div>
+            <input type="range" id="r3" min="0" max="100" value="0" name="">
+            <div class="option">
+                <div class="merge">
+                    <div><span>left</span></div>
+                    <div><input type="range" id="left" min="0" max="100" value="0" name=""></div>
+                </div>
+
+                <div class="merge">
+                    <div><span>top</span></div>
+                    <div><input type="range" id="top" min="0" max="100" value="0" name=""></div>
+                </div>
+
+                <div class="merge">
+                    <div><span>right</span></div>
+                    <div><input type="range" id="right" min="0" max="100" value="0" name=""></div>
+                </div>
+
+                <div class="merge">
+                    <div><span>bottom</span></div>
+                    <div><input type="range" id="bottom" min="0" max="100" value="0" name=""></div>
+                </div>
+            </div>
+
+            <div class="option">
+                <span>Цвет бэкграунда: </span>
+                <input type="color" id="color" name="">
+            </div>
+            
+            <div class="option_title">
+                <label id="lab_text"><input type="checkbox" name="" id="chk2" /> Добавить градиент</label>
+            </div>
+            <div class="option" id="grad_options">
+                <div class="block">
+                    <span>1 цвет: </span>
+                    <input type="color" id="first_color" value="#000000" name="">
+                    <label><input type="radio" name="grad" checked id="hor"> Горизонтальный</label>
+                </div>
+
+                <div class="block">
+                    <span>2 цвет: </span>
+                    <input type="color" id="second_color" value="#ffffff" name="">
+                    <label><input type="radio" name="grad" id="vert"> Вертикальный</label>
+                </div>
+            </div>
+
+            <div class="option_title">
+                <label id="lab_text"><input type="checkbox" name="" id="chk1" /> Добавить рамку</label>
+            </div>
+
+            <div class="option" id="border_options">
+                <span>Ширина рамки</span>
+                <input type="range" id="r2" min="1" max="10" value="0"  name=""><br/>
+            
+                <span>Цвет: </span>
+                <input type="color" id="border_color" name="">
+            </div>
+        </div>
+
+        <button class="reset">Сбросить</button>
+        
+    </div>
+    <div class="view">
+        <div class="box">Some text</div>
+        <!-- <div class="result"></div> -->
+    </div>
+</div>
+</body>
+
+    <script src="script.js"></script>
+</html>

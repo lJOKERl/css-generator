@@ -1,0 +1,179 @@
+body {
+	background: #333;
+	color: #eee;
+	font-family: 'Roboto', sans-serif;
+	font-weight: normal;
+	font-weight: 300;
+	font-size: 1.2em;
+}
+
+* {
+	outline: none;
+	box-sizing: border-box;
+}
+
+label,
+input,
+button,
+select {cursor: pointer}
+
+input[type=text] {
+	cursor: inherit;
+	padding: .5em .75em;
+	font-size: .9em;
+	background: #222;
+	color: #ddd;
+	border: 1px solid #ccc;
+}
+
+input[type=color] {
+	height: 30px;
+	-webkit-appearance: media-enter-fullscreen-button;
+}
+
+div#main {
+	margin: auto;
+	width: 1024px;
+}
+
+input[type=range] {
+	margin-bottom: 1em;
+	width: 300px;
+}
+
+#main {
+	display: table;
+}
+
+#main > div {
+	display: table-cell;
+	vertical-align: top;
+}
+
+.options {
+	width: 350px;
+	padding: .5em;
+	min-height: 300px;
+	
+}
+
+.view {
+	position: fixed;
+	padding-left: 1em;
+}
+
+.menu {
+	border-bottom: 1px solid #777;
+	margin-bottom: .5em;
+	padding: .5em;
+	margin-left: -.5em;
+	border-radius: 1em;
+}
+
+.menu_title {
+	background: #444;
+	padding: .25em;
+	text-transform: uppercase;
+	cursor: pointer;
+	margin-bottom: 2px;
+	width: 325px;
+}
+
+.black {
+	background: #222;
+}
+
+.marker {
+	display: inline-block;
+	border: 1px solid #aaa;
+	width: .8em;
+	height: .8em;
+	text-align: center;
+	line-height: .75em;
+	color: #aaa;
+}
+
+.menu_title:hover {
+	background: #222;
+}
+
+div.box {
+	color: #ddd;
+	width: 325px;
+	height: 325px;
+	background: #000;
+}
+
+div.result {
+	width: 325px;
+	padding: .5em;
+	min-height: 50px;
+	margin-top: 1em;
+	background: #434343;
+}
+
+.option {
+	text-align: left;
+	margin: .5em 0;
+	width: 325px;
+	padding: 10px;
+	background: #222;
+	border-radius: 10px;
+}
+
+.option_title {
+	margin: .25em auto;
+	margin-top: .5em;
+}
+
+#grad_options,
+#border_options {display: none;}
+
+.option span {
+	font-size: .8em;
+	padding-bottom: .2em;
+	display: inline-block;
+}
+
+.reset {
+	background: #111;
+	color: #ccc;
+	border: 1px solid #444;
+	padding: .75em 1.25em;
+	margin-top: .5em;
+	font-size: .9em;
+}
+
+.reset:hover {
+	background: #000;
+	border: 1px solid #000;
+}
+
+select {
+	background: #222;
+	border-color: #444;
+	color: #ccc;
+	padding: .25em .5em;
+	font-size: .9em;
+}
+
+.merge {display: table;}
+
+.merge > div {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.merge > div:first-child {
+	padding-right: 10px;
+	width: 100px;
+}
+
+.merge input {
+	width: 240px;
+}
+
+#some_text {
+	margin-bottom: 1em;
+	margin-top: .75em;
+}
