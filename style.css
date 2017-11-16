@@ -177,3 +177,10 @@ select {
 	margin-bottom: 1em;
 	margin-top: .75em;
 }
+
+#padding_opt {display: none}
+
+.add_opt {
+	cursor: pointer;
+	padding: 0 3px;
+}

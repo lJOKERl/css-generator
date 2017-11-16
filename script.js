@@ -1,31 +1,33 @@
 window.onload = function () {
 	"use strict";
 
-	var box = document.querySelector(".box"),
-		r1 = document.querySelector("#r1"),
+	var r1 = document.querySelector("#r1"),
 		r2 = document.querySelector("#r2"),
 		r3 = document.querySelector("#r3"),
-		left = document.querySelector("#left"),
+		box = document.querySelector(".box"),
 		top = document.querySelector("#top"),
-		right = document.querySelector("#right"),
 		hor = document.querySelector("#hor"),
+		left = document.querySelector("#left"),
 		vert = document.querySelector("#vert"),
-		bottom = document.querySelector("#bottom"),
-		color = document.querySelector("#color"),
-		first_color = document.querySelector("#first_color"),
-		second_color = document.querySelector("#second_color"),
-		text_color = document.querySelector("#text_color"),
-		border_color = document.querySelector("#border_color"),
-		result = document.querySelector(".result"),
-		reset = document.querySelector(".reset"),
 		chk1 = document.querySelector("#chk1"),
 		chk2 = document.querySelector("#chk2"),
 		bold = document.querySelector("#bold"),
-		menu = document.querySelector(".menu"),
+		right = document.querySelector("#right"),
+		color = document.querySelector("#color"),
+		reset = document.querySelector(".reset"),
+		menu = document.querySelectorAll(".menu"),
+		bottom = document.querySelector("#bottom"),
+		result = document.querySelector(".result"),
+		add_opt = document.querySelector(".add_opt"),
 		some_text = document.querySelector("#some_text"),
 		font_size = document.querySelector("#font_size"),
+		text_align = document.querySelector("#text_align"),
+		text_color = document.querySelector("#text_color"),
+		padding_opt = document.querySelector("#padding_opt"),
+		first_color = document.querySelector("#first_color"),
 		menu_title = document.querySelectorAll(".menu_title"),
-		text_align = document.querySelector("#text_align");
+		second_color = document.querySelector("#second_color"),
+		border_color = document.querySelector("#border_color");
 
 	//Поле ввода текста
 	some_text.oninput = function () {
@@ -82,9 +84,9 @@ window.onload = function () {
 	}
 
 	first_color.onchange = function () {
-			var bg = "linear-gradient(to right, " + this.value + " 0%, " + second_color.value + " 100%)";
-			box.style.background = bg;
-		}
+		var bg = "linear-gradient(to right, " + this.value + " 0%, " + second_color.value + " 100%)";
+		box.style.background = bg;
+	}
 
 	second_color.onchange = function () {
 		var bg = "linear-gradient(to right, " + first_color.value + " 0%, " + this.value + " 100%)";
@@ -92,13 +94,11 @@ window.onload = function () {
 	}
 
 	vert.onclick = function () {
-		console.log(1)
 		var bg = "linear-gradient(to bottom, " + first_color.value + " 0%, " + second_color.value + " 100%)";
 		box.style.background = bg;
 	}
 
 	hor.onclick = function () {
-		console.log(1)
 		var bg = "linear-gradient(to right, " + first_color.value + " 0%, " + second_color.value + " 100%)";
 		box.style.background = bg;
 	}
@@ -151,6 +151,26 @@ window.onload = function () {
 
 	bottom.oninput = function () {
 		box.style.paddingBottom = this.value + "px";
+	}
+
+	add_opt.onclick = function () {
+		if (padding_opt.style.display == 'none') {
+			r3.value = 0;
+			box.style.padding = 0;
+			r3.style.display = 'none';
+			this.style.background = "#111";
+			padding_opt.style.display = 'block';
+		} else {
+			box.style.padding = 0;
+			r3.style.display = 'block';
+			this.style.background = "none";
+			padding_opt.style.display = 'none';
+			top.value = 0;
+			left.value = 0;
+			right.value = 0;
+			bottom.value = 0;
+
+		}
 	}
 
 	//Цвет рамки
@@ -221,12 +241,16 @@ window.onload = function () {
 		underline.checked = false;
 		box.textContent = "Some text";
 		some_text.value = "";
-		menu.style.display = "none";
+		
 
 		var marker = document.querySelectorAll(".marker");
 
 		for (var i = 0; i < marker.length; i++) {
 			marker[i].textContent = "+";
+		}
+
+		for (var i = 0; i < menu.length; i++) {
+			menu[i].style.display = 'none';
 		}
 
 		if (chk1.checked) {
