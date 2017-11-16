@@ -93,8 +93,14 @@ window.onload = function () {
 
 	vert.onclick = function () {
 		console.log(1)
-		var bg = "linear-gradient(top, " + this.value + " 0%, " + second_color.value + " 100%)";
-			box.style.background = bg;
+		var bg = "linear-gradient(to bottom, " + first_color.value + " 0%, " + second_color.value + " 100%)";
+		box.style.background = bg;
+	}
+
+	hor.onclick = function () {
+		console.log(1)
+		var bg = "linear-gradient(to right, " + first_color.value + " 0%, " + second_color.value + " 100%)";
+		box.style.background = bg;
 	}
 
 	//Цвет текста
